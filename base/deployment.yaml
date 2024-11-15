@@ -2,22 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app: blue
   name: blue
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: blue
-  replicas: 1
-  strategy:
-    type: RollingUpdate
   template:
     metadata:
       labels:
         app: blue
     spec:
-      restartPolicy: Always
       containers:
-        - name: blue
+        - name: app
           image: ghcr.io/gitops-remote-dev/blue:b2ddbdcbaf273bc3e00b92822967925264765569
           ports:
             - name: web
