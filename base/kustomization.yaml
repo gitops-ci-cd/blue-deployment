@@ -6,4 +6,4 @@ resources:
 - http-route.yaml
 images:
 - name: ghcr.io/gitops-ci-cd/blue
-  newTag: latest
+  newTag: b2ddbdcbaf273bc3e00b92822967925264765569
