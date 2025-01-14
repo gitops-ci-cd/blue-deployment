@@ -7,3 +7,6 @@ resources:
 images:
 - name: ghcr.io/gitops-ci-cd/blue
   newTag: b2ddbdcbaf273bc3e00b92822967925264765569
+- name: blue
+  newName: ghcr.io/gitops-ci-cd/blue
+  newTag: latest
