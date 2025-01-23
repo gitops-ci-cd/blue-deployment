@@ -4,3 +4,12 @@ kind: Kustomization
 
 resources:
   - ../../base
+
+patches:
+  - target:
+      kind: HTTPRoute
+      name: blue-route
+    patch: |-
+      - op: add
+        path: /spec/hostnames/-
+        value: "blue.dudo.dev"
